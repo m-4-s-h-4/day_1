@@ -1,16 +1,30 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var button = document.querySelector('button');
-    var body = document.body;
+document.addEventListener('DOMContentLoaded', () => {
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    document.body.appendChild(cursor);
 
-    function toggleBackgroundColor() {
-        if (button.textContent.includes("favourite colour")) {
-            body.classList.add("orange-bg");
-            button.textContent = 'Reset';
-        } else {
-            body.classList.remove("orange-bg");
-            button.textContent = "What's my favourite colour?";
-        }
-    }
+    let lastX, lastY;
 
-    button.addEventListener('click', toggleBackgroundColor);
+    document.addEventListener('mousemove', e => {
+        lastX = e.clientX;
+        lastY = e.clientY;
+        requestAnimationFrame(() => {
+            if (cursor) {
+                cursor.style.left = lastX + 'px';
+                cursor.style.top = lastY + 'px';
+            }
+        });
+    });
+
+    document.querySelectorAll('.thumbnail').forEach(item => {
+        item.addEventListener('mouseover', event => {
+            const mainImage = document.getElementById('main-image');
+            mainImage.style.backgroundImage = `url('${event.target.src}')`;
+        });
+    });
+
+    document.querySelectorAll('.thumbnail').forEach(thumbnail => {
+        thumbnail.addEventListener('mouseover', () => cursor.classList.add('custom-cursor--hover'));
+        thumbnail.addEventListener('mouseout', () => cursor.classList.remove('custom-cursor--hover'));
+    });
 });
