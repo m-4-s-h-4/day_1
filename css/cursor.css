@@ -1,0 +1,15 @@
+.custom-cursor {
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid black;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.custom-cursor--hover {
+    transition: transform 0.5s ease;
+    width: 110px;
+    height: 110px;
+}

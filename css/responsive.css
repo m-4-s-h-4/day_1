@@ -1,0 +1,46 @@
+/*tablets */
+@media (max-width: 1060px) {
+    .title {
+        font-size: 10rem;
+        top: 30%;
+        left: 50%;
+        width: 200%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .main-image {
+        width: 50%;
+        height: 60%;
+    }
+
+    .thumbnail {
+        display: none; 
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .title {
+        font-size: 6rem;
+        line-height: 5rem;
+        width:  130%; 
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .main-image {
+        width: 75%;
+        height: 75%;
+    }
+
+    .thumbnail {
+        display: none; 
+    }
+
+    .name {
+        font-size: 15px;
+        bottom: 5px;
+        right: 15px;
+    }
+    }
