@@ -1,0 +1,54 @@
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column; 
+    }
+    #techDropdown {
+        display: none;
+    }
+
+    .sidebar, #projectsGrid {
+        width: 90%; 
+        margin: 10px 0;
+    }
+
+    #projectsGrid {
+        min-height: 60vh;
+        order: 2;
+    }
+
+    .sidebar {
+        order: 1;
+        margin-top: 10rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #techButtons {
+        display: none;
+    }
+
+    #techDropdown {
+        display: block;
+        width: 100%; 
+        padding: 10px;
+        margin-top: 20px;
+        border: 2px solid rgb(240, 239, 228);
+        background: transparent;
+        color: rgb(240, 239, 228);
+        border-radius: 5px;
+    }
+    .sidebar {
+        margin-top: 0; 
+    }
+    #projectsGrid {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+    }
+    .project-card:nth-child(1),
+    .project-card:nth-child(2),
+    .project-card:nth-child(3),
+    .project-card:nth-child(4) {
+        grid-area: auto;
+    }
+}

@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(21, 21, 21);
+}
+
+#techDropdown {
+    display: none;
+}
+
+.sidebar {
+    width: 60%; 
+    padding: 20px;
+    color: rgb(240, 239, 228);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar h2 {
+    font-family: 'Leiko';
+    font-size: 15vw;
+    margin-bottom: 20px; 
+}
+
+#techButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 45%;
+}
+
+button {
+    font-family: 'Leiko';
+    text-transform: uppercase;
+    font-size: 2vh;
+    flex: 0 1 calc(25% - 10px);
+    margin: 5px;
+    padding: 10px;
+    background-color: transparent;
+    color: rgb(240, 239, 228);
+    border: 2px solid rgb(240, 239, 228);
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: rgb(240, 239, 228);
+    color:rgb(21, 21, 21) ;
+}
+
+#projectsGrid {
+    margin-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: 40%;
+    height: 95vh; 
+    overflow: auto;
+}
+
+.project-card {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    height: auto;
+}
+
+.project-card:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.project-card:nth-child(2) {
+    grid-area: 1 / 2 / 4 / 3;
+}
+
+.project-card:nth-child(3) {
+    grid-area: 3 / 1 / 5 / 2;
+}
+
+.project-card:nth-child(4) {
+    grid-area: 4 / 2 / 6 / 3;
+}
+
+.project-card {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.project-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.657); 
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow: auto;
+}
+
+.project-card:hover .project-content {
+    opacity: 1;
+}
+
+.project-title{
+   
+    font-family: 'Leiko';
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.project-description {
+    font-family: 'Leiko';
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.project-technologies {
+    font-family: 'Leiko';
+    margin-top: 10px;
+}
+

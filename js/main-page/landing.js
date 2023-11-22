@@ -81,6 +81,51 @@ document.addEventListener('scroll', () => {
         document.body.style.backgroundColor = 'rgb(44,4,12)'; 
     }
 });
+document.getElementById('switchToEnglish').addEventListener('click', () => {
+    console.log("English button clicked");
+    changeLanguage('en');
+});
+
+document.getElementById('switchToSpanish').addEventListener('click', () => {
+    changeLanguage('es');
+});
+
+function changeLanguage(language) {
+    document.querySelectorAll("[data-key]").forEach(elem => {
+        let key = elem.getAttribute('data-key');
+        let keys = key.split(".");
+        let translationObj = translations;
+        for (let k of keys) {
+            if (translationObj[k]) {
+                translationObj = translationObj[k];
+            } else {
+                return; 
+            }
+        }
+        let translationText = translationObj[language];
+        if (elem.tagName === "IMG") {
+            elem.alt = translationText;
+        } else {
+            elem.textContent = translationText;
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const projectButton = document.getElementById('AboutMeButton');
+    
+    projectButton.addEventListener('click', function() {
+        window.location.href = 'about-me.html'; 
+    });
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const projectButton = document.getElementById('ProjectButton');
+    
+    projectButton.addEventListener('click', function() {
+        window.location.href = 'projects.html'; 
+    });
+});
 
 
 

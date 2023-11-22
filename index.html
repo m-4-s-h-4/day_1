@@ -3,69 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title data-key="title">Shaping Ideas into Reality</title>
+    <link rel="stylesheet" href="css/sections/section1.css">
+    <link rel="stylesheet" href="css/sections/responsive.css">
     <link rel="stylesheet" href="css/cursor.css">
     <link rel="stylesheet" href="css/anim/main-image-anim.css">
     <link rel="stylesheet" href="css/anim/thumbnail-anim.css">
     <link rel="stylesheet" href="css/sections/section2.css">
     <link rel="stylesheet" href="css/sections/section3.css">
-    <link rel="stylesheet" href="wave.css">
 </head>
 <body>
     <div class="section" id="section1">
-        <div id="main-image" class="main-image">
-            <h1 class="title">Shaping Ideas into Reality</h1>
+        <div class="language-switcher">
+            <button id="switchToEnglish">English</button>
+            <button id="switchToSpanish">Español</button>
         </div>
-        <div class="name">Maria Borovikova</div>
+        
+        <div id="main-image" class="main-image">
+            <h1 class="title" data-key="title">Shaping Ideas into Reality</h1>
+        </div>
+        <div class="name" data-key="section1.name">Maria Borovikova</div>
         <div class="thumbnails">
-            <img src="https://i.pinimg.com/736x/0e/2f/49/0e2f4993fe4f2dd6d4486a6183fe212a.jpg" alt="Image 1" class="thumbnail">
-            <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 2" class="thumbnail">
-            <img src="https://i.pinimg.com/736x/0e/2f/49/0e2f4993fe4f2dd6d4486a6183fe212a.jpg" alt="Image 3" class="thumbnail">
-            <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 4" class="thumbnail">
-            <img src="https://i.pinimg.com/736x/0e/2f/49/0e2f4993fe4f2dd6d4486a6183fe212a.jpg" alt="Image 5" class="thumbnail">
-            <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 6" class="thumbnail">
-            <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 7" class="thumbnail">
-            <img src="https://i.pinimg.com/736x/0e/2f/49/0e2f4993fe4f2dd6d4486a6183fe212a.jpg" alt="Image 8" class="thumbnail">
-            <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 9" class="thumbnail">
+                <img src="https://i.pinimg.com/736x/0e/2f/49/0e2f4993fe4f2dd6d4486a6183fe212a.jpg" alt="Image 1" class="thumbnail">
+                <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 2" class="thumbnail" >
+                <img src="https://i.pinimg.com/736x/0e/2f/49/0e2f4993fe4f2dd6d4486a6183fe212a.jpg" alt="Image 3" class="thumbnail" >
+                <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 4" class="thumbnail">
+                <img src="https://i.pinimg.com/736x/0e/2f/49/0e2f4993fe4f2dd6d4486a6183fe212a.jpg" alt="Image 5" class="thumbnail" >
+                <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 6" class="thumbnail" >
+                <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 7" class="thumbnail">
+                <img src="https://i.pinimg.com/736x/0e/2f/49/0e2f4993fe4f2dd6d4486a6183fe212a.jpg" alt="Image 8" class="thumbnail">
+                <img src="https://i.pinimg.com/736x/90/85/fb/9085fb7b9fd2948edcf271de7cfbfb63--app-ui-ui-ux.jpg" alt="Image 9" class="thumbnail">
         </div>
     </div>
 
     <div class="section" id="section2">
         <div class="flex-item2" id="image-box2">
-            <img src="https://www.anastasiajobson.com/wp-content/uploads/2020/05/Sophie-Model-Portfolio-1.jpg" alt="imagine its a photo of me">
-            <button>
+            <img src="https://www.anastasiajobson.com/wp-content/uploads/2020/05/Sophie-Model-Portfolio-1.jpg" alt="Photo of me" >
+            <button id="AboutMeButton">
                 <svg width="40" height="40" viewBox="0 0 24 24">
                     <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
                 </svg>
             </button>
         </div>
         <div class="flex-item2" id="text-box2">
-            <h2>About Me</h2>
-            <p>Hello! I’m Maria, a passionate and creative Front-End Developer with a flair for crafting engaging and user-friendly websites. With 2 years of experience in the industry, I specialize in bringing designs to life using the latest web technologies.</p>
+            <h2 data-key="section2.aboutMe.title">About Me</h2>
+            <p data-key="section2.aboutMe.description">Hello! I’m Maria, a passionate and creative Front-End Developer...</p>
         </div>
     </div>
-
     <div class="section" id="section3">
         <div class="flex-item3" id="text-box3">
-            <h2>Projects</h2>
-            <p>Hello! I’m Maria, a passionate and creative Front-End Developer with a flair for crafting engaging and user-friendly websites. With 2 years of experience in the industry, I specialize in bringing designs to life using the latest web technologies.</p>
+            <h2 data-key="section3.projects.title">Projects</h2>
+            <p data-key="section3.projects.description">As a Front-End Developer, I have engaged in a diverse range of projects that showcase my ability to create engaging and user-friendly web interfaces. Have a look at some of the projects...</p>
         </div>
         <div class="flex-item3" id="image-box3">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ff59a869490411.5b83afd44d177.gif" alt="imagine its a photo of me">
-            <button>
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ff59a869490411.5b83afd44d177.gif" alt="Project thumbnail">
+            <button id="ProjectButton">
                 <svg width="40" height="40" viewBox="0 0 24 24">
                     <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
                 </svg>
             </button>
         </div>
     </div>
+    
     <footer>
-       
+        <!-- footer implement email sending -->
     </footer>
-    <script src="app.js"></script>
+    <script src="js/main-page/translation.js"></script>
+    <script src="js/main-page/landing.js"></script>
 </body>
 </html>
-
-
