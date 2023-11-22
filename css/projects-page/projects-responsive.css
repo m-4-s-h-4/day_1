@@ -36,8 +36,13 @@
         border: 2px solid rgb(240, 239, 228);
         background: transparent;
         color: rgb(240, 239, 228);
-        border-radius: 5px;
+        border-radius: 20px;
     }
+
+    #searchBar {
+        width: 60%;
+    }
+
     .sidebar {
         margin-top: 0; 
     }

@@ -12,6 +12,18 @@ body {
     display: none;
 }
 
+#searchBar {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: rgb(240, 239, 228);
+    border: 2px solid rgb(240, 239, 228);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
 .sidebar {
     width: 60%; 
     padding: 20px;

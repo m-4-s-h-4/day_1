@@ -34,16 +34,9 @@ function createProjectCard(project) {
     return card;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const grid = document.getElementById('projectsGrid');
-    frontendProjects.forEach(project => {
-        grid.appendChild(createProjectCard(project));
-    });
-});
-
 function displayProjects(projects) {
     const grid = document.getElementById('projectsGrid');
-    grid.innerHTML = ''; 
+    grid.innerHTML = '';
     projects.forEach(project => {
         grid.appendChild(createProjectCard(project));
     });
@@ -54,6 +47,7 @@ function createTechButtons() {
     frontendProjects.forEach(p => p.technologies.forEach(t => uniqueTechs.add(t)));
 
     const techButtons = document.getElementById('techButtons');
+    techButtons.innerHTML = ''; 
     uniqueTechs.forEach(tech => {
         const button = document.createElement('button');
         button.textContent = tech;
@@ -67,14 +61,9 @@ function filterProjects(tech) {
     displayProjects(filteredProjects);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    createTechButtons();
-    displayProjects(frontendProjects); 
-});
-
-
 function createTechDropdown() {
     const techDropdown = document.getElementById('techDropdown');
+    techDropdown.innerHTML = ''; 
     const uniqueTechs = new Set();
     frontendProjects.forEach(p => p.technologies.forEach(t => uniqueTechs.add(t)));
 
@@ -83,7 +72,6 @@ function createTechDropdown() {
         option.value = tech;
         option.textContent = tech;
         techDropdown.appendChild(option);
-        console.log("Tech dropdown created");
     });
 
     techDropdown.addEventListener('change', () => {
@@ -91,8 +79,20 @@ function createTechDropdown() {
     });
 }
 
+function setupSearchBar() {
+    const searchBar = document.getElementById('searchBar');
+    searchBar.addEventListener('input', () => {
+        const searchQuery = searchBar.value.toLowerCase();
+        const filteredProjects = frontendProjects.filter(project => 
+            project.title.toLowerCase().includes(searchQuery)
+        );
+        displayProjects(filteredProjects);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     createTechButtons();
     createTechDropdown();
+    setupSearchBar();
     displayProjects(frontendProjects);
 });

@@ -91,6 +91,7 @@ document.getElementById('switchToSpanish').addEventListener('click', () => {
 });
 
 function changeLanguage(language) {
+    localStorage.setItem('preferredLanguage', language);
     document.querySelectorAll("[data-key]").forEach(elem => {
         let key = elem.getAttribute('data-key');
         let keys = key.split(".");
