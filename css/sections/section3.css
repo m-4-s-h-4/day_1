@@ -1,0 +1,103 @@
+#section3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 3rem;
+    color: rgb(240, 239, 228);
+    font-family: 'Leiko';
+    font-weight: lighter;
+    font-size: 10.5rem; 
+    line-height: 1.2;
+}
+
+p {
+    font-family: 'Leiko';
+    color: rgb(240, 239, 228);
+    font-size: 1.2em; 
+}
+
+.flex-item3 {
+    margin: 10px;
+}
+
+#text-box3, #image-box3 {
+    max-width: 100%;
+    padding: 1%;
+}
+
+#image-box3 {
+    position: relative; 
+    max-width: 100%;
+    padding: 1%;
+}
+
+#image-box3 img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+}
+
+#section3 button {
+    position: absolute;
+    bottom:25px;
+    right: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid rgb(240, 239, 228);
+    mix-blend-mode: difference; 
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#section3 button svg {
+    fill: rgb(255, 255, 255); 
+    mix-blend-mode: difference; 
+
+}
+
+@media screen and (max-width: 1240px) {
+    #section3 {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "text";
+    }
+
+    #image-box3 {
+        grid-area: image;
+    }
+
+    #text-box3 {
+        grid-area: text;
+    }
+
+
+    #text-box3, #image-box3 {
+        max-width: 100%;
+        order: 0; 
+        padding: 5px; 
+    }
+
+    h2 {
+        font-size: 3rem; 
+        margin: 10px 0; 
+    }
+
+    p {
+        font-size: 1.2em; 
+        margin: 0; 
+    }
+
+    #section3 button {
+        margin-bottom: 10px; 
+    }
+}
+
+
