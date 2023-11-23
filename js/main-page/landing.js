@@ -78,7 +78,7 @@ document.addEventListener('scroll', () => {
     } else if (section2Top <= viewportHeight && section2Top >= 0) {
         document.body.style.backgroundColor = 'rgb(21, 21, 21)';
     } else if (section3Top <= viewportHeight && section3Top >= 0) {
-        document.body.style.backgroundColor = 'rgb(44,4,12)'; 
+        document.body.style.backgroundColor = 'rgb(95, 0, 0)'; 
     }
 });
 document.getElementById('switchToEnglish').addEventListener('click', () => {

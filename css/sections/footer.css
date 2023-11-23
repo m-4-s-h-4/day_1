@@ -4,12 +4,8 @@
     gap: 30px;
     padding: 30px;
     align-items: start;
-}
-
-.contact-title {
-    font-size: 1.5rem;
-    color: rgb(240, 239, 228);
-    font-weight: bold;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(95,0,0,1) 100%);
 }
 
 .contact-form {
@@ -23,11 +19,12 @@
     border: 2px solid rgb(240, 239, 228);
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    
 }
 
 input[type="email"], textarea {
     width: calc(100% - 16px);
+    font-family: 'Leiko';
     padding: 10px;
     margin: 10px 0;
     box-sizing: border-box;
@@ -39,12 +36,15 @@ input[type="email"], textarea {
 }
 
 label {
+    font-family: 'Leiko';
     font-size: 1rem;
     color: rgb(240, 239, 228);
     margin-top: 15px;
 }
 
 input[type="submit"] {
+
+    font-family: 'Leiko';
     padding: 12px 20px;
     background-color: transparent;
     border: 2px solid rgb(240, 239, 228);
