@@ -14,6 +14,12 @@
         height: 60%;
     }
 
+    .name {
+        font-size: 15px;
+        bottom: -5rem;
+        right: 15px;
+    }
+
     .thumbnail {
         display: none; 
     }
@@ -40,7 +46,7 @@
 
     .name {
         font-size: 15px;
-        bottom: 5px;
+        bottom: -10rem;
         right: 15px;
     }
     }

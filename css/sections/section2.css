@@ -5,6 +5,7 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
+    grid-template-areas: "text image"; 
 }
 
 h2 {
@@ -12,7 +13,7 @@ h2 {
     color: rgb(240, 239, 228);
     font-family: 'Leiko';
     font-weight: lighter;
-    font-size: 8.5rem; 
+    font-size: 30vh; 
     line-height: 1.2;
 }
 
@@ -25,7 +26,14 @@ p {
 .flex-item2 {
     margin: 10px;
 }
+#text-box2 {
+    grid-area: text; 
+    
+}
 
+#image-box2 {
+    grid-area: image; 
+}
 #text-box2, #image-box2 {
     max-width: 100%;
     padding: 1%;
@@ -60,32 +68,37 @@ p {
 
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1260px) {
     #section2 {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        overflow: auto; 
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+            "text"
+            "image"; 
     }
 
-    #text-box2, #image-box2 {
-        max-width: 100%;
-        order: 0; 
-        padding: 5px; 
+    .section {
+        min-height: 100vh;
     }
 
-    h2 {
-        font-size: 3rem; 
-        margin: 10px 0; 
+    #image-box2 img {
+        max-height: 70vh; 
+        object-fit: contain; 
     }
 
-    p {
-        font-size: 1.2em; 
-        margin: 0; 
+    #section2 h2 {
+        margin-top: 3rem;
+        font-size: 15vh; 
+    }
+
+    #section2 p {
+        font-size: 3vh; 
     }
 
     #section2 button {
-        margin-bottom: 10px; 
+        width: 100px;
+        height: 100px;
+        bottom: 15px;
+        right: 15px;
     }
 }
-
 

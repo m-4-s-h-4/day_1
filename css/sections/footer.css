@@ -61,14 +61,43 @@ input[type="submit"]:hover {
     color: black;
 }
 
+
 @media (max-width: 1240px) {
     .contact-container {
         grid-template-columns: 1fr;
-        padding: 20px;
+        padding: 15px;
+    }
+
+    .contact-title h2{
+        font-size: 12vh;
     }
 
     .contact-form {
+        margin: 2rem auto; 
         max-width: 100%;
-        margin: 0;
+    }
+
+    input[type="email"], textarea {
+        width: calc(100% - 10px); 
+    }
+
+    label, input[type="submit"] {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        margin: 1rem auto; 
+        padding: 15px; 
+    }
+
+    input[type="email"], textarea {
+        font-size: 0.8rem; 
+    }
+
+    input[type="submit"] {
+        padding: 10px 15px; 
+        font-size: 0.8rem; 
     }
 }
