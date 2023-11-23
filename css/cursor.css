@@ -1,7 +1,3 @@
-#section1 {
-    cursor: none; 
-}
-
 .custom-cursor {
     width: 20px;
     height: 20px;
@@ -10,10 +6,17 @@
     position: absolute;
     pointer-events: none;
     z-index: 10000;
+    display: none; 
 }
 
 .custom-cursor--hover {
     transition: transform 0.5s ease;
     width: 110px;
     height: 110px;
+}
+
+@media screen and (min-width: 1061px) {
+    .custom-cursor {
+        display: block; 
+    }
 }
