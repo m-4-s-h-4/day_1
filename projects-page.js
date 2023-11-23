@@ -107,5 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
     createTechDropdown();
     setupSearchBar(preferredLanguage);
     displayProjects(frontendProjects, preferredLanguage);
-});
 
+    const backButton = document.getElementById('backButton');
+    backButton.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+});
