@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/anim/thumbnail-anim.css">
     <link rel="stylesheet" href="css/sections/section2.css">
     <link rel="stylesheet" href="css/sections/section3.css">
+    <link rel="stylesheet" href="css/sections/footer.css">
 </head>
 <body>
     <div class="section" id="section1">
@@ -47,7 +48,7 @@
         </div>
         <div class="flex-item2" id="text-box2">
             <h2 data-key="section2.aboutMe.title">About Me</h2>
-            <p data-key="section2.aboutMe.description">Hello! I’m Maria, a passionate and creative Front-End Developer...</p>
+            <p data-key="section2.aboutMe.description">Hello! I’m Maria, a passionate and creative Front-End Developer with a flair for crafting engaging and user-friendly websites. With 2 years of experience in the industry, I specialize in bringing designs to life using the latest web technologies.</p>
         </div>
     </div>
     <div class="section" id="section3">
@@ -64,10 +65,25 @@
             </button>
         </div>
     </div>
-    
     <footer>
-        <!-- footer implement email sending -->
+        <div class="contact-container">
+            <div class="contact-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-form">
+                <form action="http://localhost:3000/send" method="post">
+                    <label for="user-email">Your Email:</label>
+                    <input type="email" id="user-email" name="userEmail" required>
+                    <br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <br>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
     </footer>
+    
     <script src="js/main-page/translation.js"></script>
     <script src="js/main-page/landing.js"></script>
 </body>
