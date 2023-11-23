@@ -1,23 +1,26 @@
-import { frontendProjects } from './js/projects-page/frontendProjects.js';
+let preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
 
-function createProjectCard(project) {
+import { frontendProjects } from './js/projects-page/frontendProjects.js';
+import { translations } from './js/projects-page/projects-page-translation.js';
+
+function createProjectCard(project, language) {
     const card = document.createElement('div');
     card.classList.add('project-card');
 
     const image = document.createElement('img');
     image.src = project.imageUrl;
-    image.alt = project.title;
+    image.alt = project.title[language]; 
     image.classList.add('project-image');
 
     const content = document.createElement('div');
     content.classList.add('project-content');
 
     const title = document.createElement('h3');
-    title.textContent = project.title;
+    title.textContent = project.title[language]; 
     title.classList.add('project-title');
 
     const description = document.createElement('p');
-    description.textContent = project.description;
+    description.textContent = project.description[language]; 
     description.classList.add('project-description');
 
     const technologies = document.createElement('p');
@@ -26,7 +29,7 @@ function createProjectCard(project) {
 
     content.appendChild(title);
     content.appendChild(description);
-    content.appendChild(technologies);
+    // content.appendChild(technologies);
 
     card.appendChild(image);
     card.appendChild(content);
@@ -34,15 +37,22 @@ function createProjectCard(project) {
     return card;
 }
 
-function displayProjects(projects) {
+function applyTranslations(language) {
+    document.querySelector('.sidebar h2').textContent = translations[language]['projectsTitle'];
+    document.getElementById('searchBar').placeholder = translations[language]['searchPlaceholder'];
+    console.log("Applying translations for language:", language);
+    console.log("Projects Title:", translations[language]['projectsTitle']);
+}
+
+function displayProjects(projects, language) {
     const grid = document.getElementById('projectsGrid');
     grid.innerHTML = '';
     projects.forEach(project => {
-        grid.appendChild(createProjectCard(project));
+        grid.appendChild(createProjectCard(project, language));
     });
 }
 
-function createTechButtons() {
+function createTechButtons(language) {
     const uniqueTechs = new Set();
     frontendProjects.forEach(p => p.technologies.forEach(t => uniqueTechs.add(t)));
 
@@ -51,14 +61,14 @@ function createTechButtons() {
     uniqueTechs.forEach(tech => {
         const button = document.createElement('button');
         button.textContent = tech;
-        button.addEventListener('click', () => filterProjects(tech));
+        button.addEventListener('click', () => filterProjects(tech, language));
         techButtons.appendChild(button);
     });
 }
 
-function filterProjects(tech) {
+function filterProjects(tech, language) {
     const filteredProjects = frontendProjects.filter(p => p.technologies.includes(tech));
-    displayProjects(filteredProjects);
+    displayProjects(filteredProjects, language);
 }
 
 function createTechDropdown() {
@@ -75,24 +85,27 @@ function createTechDropdown() {
     });
 
     techDropdown.addEventListener('change', () => {
-        filterProjects(techDropdown.value);
+        filterProjects(techDropdown.value, preferredLanguage);
     });
 }
 
-function setupSearchBar() {
+function setupSearchBar(language) {
     const searchBar = document.getElementById('searchBar');
     searchBar.addEventListener('input', () => {
         const searchQuery = searchBar.value.toLowerCase();
         const filteredProjects = frontendProjects.filter(project => 
-            project.title.toLowerCase().includes(searchQuery)
+            project.title[language].toLowerCase().includes(searchQuery)
         );
-        displayProjects(filteredProjects);
+        displayProjects(filteredProjects, language);
     });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    createTechButtons();
+    preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+    applyTranslations(preferredLanguage);
+    createTechButtons(preferredLanguage);
     createTechDropdown();
-    setupSearchBar();
-    displayProjects(frontendProjects);
+    setupSearchBar(preferredLanguage);
+    displayProjects(frontendProjects, preferredLanguage);
 });
+
