@@ -1,11 +1,14 @@
 /* tablets */
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
     .container {
         flex-direction: column; 
        
     }
     h2 {
-        font-size: 20vw; 
+        font-size: 25vw; 
+    }
+    p{
+        margin-top: 5rem;
     }
     .grid-container {
         grid-template-columns: repeat(2, 1fr); 
@@ -34,7 +37,10 @@
     }
     h2 {
         margin-top: 4rem;
-        font-size: 15vw; 
+        font-size: 20vw; 
+    }
+    p{
+        margin-top: 0;
     }
     .grid-container {
         grid-template-columns: 1fr; 

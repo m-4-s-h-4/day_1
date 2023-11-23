@@ -21,6 +21,7 @@
         order: 1;
         margin-top: 10rem;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -41,6 +42,11 @@
 
     #searchBar {
         width: 60%;
+    }
+
+    .sidebar h2 {
+        margin-right: 7rem;
+        margin-bottom: 2rem;
     }
 
     .sidebar {

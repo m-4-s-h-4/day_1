@@ -31,6 +31,7 @@ body {
     transform: scaleX(-1); 
     fill: rgb(240, 239, 228);
 }
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -49,10 +50,10 @@ h2 {
     color: rgb(240, 239, 228);
     font-size: 12vw;
     margin-bottom: 20px; 
+    line-height: 10rem;
 }
 
 .text-content p {
-
     color: rgb(240, 239, 228);
     font-size: 1em;
     margin-bottom: 20px;
@@ -89,7 +90,19 @@ h2 {
     background-color: #000000;
     border: 1px solid #000000;
     overflow: hidden;
-    z-index: 100;
+    z-index: 1000;
+    animation: slideFadeIn 0.9s ease-out forwards;
+}
+
+@keyframes slideFadeIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .grid-item img {
