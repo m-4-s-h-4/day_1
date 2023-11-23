@@ -1,0 +1,50 @@
+/* tablets */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+       
+    }
+    h2 {
+        font-size: 20vw; 
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+    }
+    .container, .text-content {
+    
+        margin: 5px;
+    }
+    .button, .download-button {
+        font-size:3vh; 
+    }
+}
+
+/* mobile*/
+@media (max-width: 480px) {
+
+    #backButton {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+    .container {
+        flex-direction: column; 
+        margin: auto;
+    }
+    h2 {
+        margin-top: 4rem;
+        font-size: 15vw; 
+    }
+    .grid-container {
+        grid-template-columns: 1fr; 
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+    }
+    .container, .text-content {
+        padding: 5px; 
+    }
+    .button, .download-button {
+        font-size:2vh; 
+    }
+}
